@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
+/.venv
+venv/
+env/
+
+# IDE / editor specific files
+.vscode/
+.idea/
+
+# Django specific
+*.log
+*.pot
+*.pyc
+db.sqlite3
+/static/
+/media/
+
+# Ignore pipenv or virtualenv requirements
+/.venv
+pip-log.txt
+pipenv-log.txt
+/.env
+
+# Ignore coverage reports
+.coverage
+
+# Ignore Swagger related files
+swagger/
+swagger-ui/
