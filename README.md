@@ -13,7 +13,21 @@ Debe tener el Engine de MySQL corriendo en la maquina donde se instale esta APP 
 ```
 docker run --name bank -e MYSQL_ROOT_PASSWORD=bank123 -e MYSQL_DATABASE=bank -p 3306:3306 -d mysql:latest
 ```
+Para cambiar las credenciales de acceso a la Base de Datos como su nombre u otro parametro relevante, favor considere modificar el apartado DATABASES en la ruta
+banktransactions/settings.py 
 
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bank',
+        'USER': 'root',
+        'PASSWORD': 'bank123',
+        'HOST': '127.0.0.1',  # O la IP del contenedor si estás usando Docker en un entorno diferente
+        'PORT': '3306',
+    }
+}
+```
 ### Configuración Inicial
 
 1. Clonar el repostirio
